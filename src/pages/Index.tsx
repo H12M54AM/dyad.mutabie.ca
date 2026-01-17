@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
-import { MadeWithDyad } from "@/components/made-with-dyad";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-bg-primary text-text-primary">
+      <Navigation />
+      
       {/* Hero */}
-      <section className="min-h-screen flex items-center justify-center py-12 px-4 relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center py-12 px-4 pt-24 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
@@ -91,13 +94,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12 text-center text-text-secondary">
-        <div className="max-w-4xl mx-auto">
-          <p className="mb-4">&copy; 2025 Dyad Framework. All rights reserved.</p>
-          <MadeWithDyad />
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 }
