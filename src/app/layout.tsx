@@ -3,6 +3,7 @@ import "../globals.css";
 import { Toaster } from 'react-hot-toast';
 import ConsentBanner from "@/components/ConsentBanner";
 import AnalyticsWrapper from "@/components/AnalyticsWrapper";
+import { CookiesProvider } from 'react-cookie';
 
 export const metadata: Metadata = {
   title: "Dyad Framework",
@@ -17,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
-        <AnalyticsWrapper />
-        <ConsentBanner />
-        <Toaster />
+        <CookiesProvider>
+          {children}
+          <AnalyticsWrapper />
+          <ConsentBanner />
+          <Toaster />
+        </CookiesProvider>
       </body>
     </html>
   );
