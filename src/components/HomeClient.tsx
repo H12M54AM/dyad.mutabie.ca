@@ -21,14 +21,14 @@ export default function HomeClient() {
             Build stunning web applications with AI assistance. Create beautiful, responsive interfaces in minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <Link 
               href="https://mutabie.ca/contact/" 
               className="px-8 py-4 bg-primary hover:bg-primary-hover text-white text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-flex items-center justify-center"
               target="_blank" 
               rel="noopener noreferrer"
             >
               Get Started
-            </a>
+            </Link>
             <Link href="/about">
               <button className="px-8 py-4 border border-text-primary text-text-primary hover:bg-bg-secondary text-lg font-semibold rounded-xl transition-all duration-300">
                 Learn More
@@ -37,7 +37,7 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
-      
+
       {/* Features */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
@@ -84,7 +84,7 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className="py-24 px-4 bg-gradient-to-r from-primary to-primary-hover text-white">
         <div className="max-w-4xl mx-auto text-center">
@@ -93,40 +93,35 @@ export default function HomeClient() {
             Curious to learn more about this site and who made it?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <Link 
               href="https://mutabie.ca/contact/" 
               className="px-8 py-4 bg-white text-primary hover:bg-secondary text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-flex items-center justify-center"
               target="_blank" 
               rel="noopener noreferrer"
             >
               Reach out!
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="https://github.com/Mutabie-Canada-Inc/dyad.mutabie.ca" 
               className="px-8 py-4 bg-transparent border border-white text-white hover:bg-white/10 text-lg font-semibold rounded-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
               target="_blank" 
               rel="noopener noreferrer"
             >
               <Github size={20} /> Source Code
-            </a>
+            </Link>
           </div>
         </div>
       </section>
-      
+
       {/* Footer */}
       <footer className="border-t border-border py-12 text-center text-text-secondary">
         <div className="max-w-4xl mx-auto">
           <p className="mb-4">&copy; 2026 Mutabie Canada Inc. All rights reserved.</p>
           <p className="text-sm">
             Powered by{" "}
-            <a 
-              href="https://mutabie.ca" 
-              className="text-primary hover:underline" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
+            <Link href="https://mutabie.ca" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
               Mutabie Canada Inc.
-            </a>
+            </Link>
           </p>
         </div>
       </footer>
