@@ -139,7 +139,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <Github size={20} />
-              Course Code
+              Source Code
             </a>
           </div>
         </div>
