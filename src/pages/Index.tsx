@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MadeWithDyad } from "@/components/made-with-dyad";
+import { EXTERNAL_LINKS } from "@/config/external-links";
 
 export default function Home() {
   return (
@@ -11,7 +12,6 @@ export default function Home() {
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
         </div>
-        
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
             Dyad Framework
@@ -21,7 +21,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="https://mutabie.ca/contact/" 
+              href={EXTERNAL_LINKS.MUTABIE_CONTACT} 
               target="_blank" 
               rel="noopener noreferrer"
               className="px-8 py-4 bg-primary hover:bg-primary-hover text-white text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-flex items-center justify-center"
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       {/* Features */}
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       {/* CTA Section */}
       <section className="py-24 px-4 bg-gradient-to-r from-primary to-primary-hover text-white">
         <div className="max-w-4xl mx-auto text-center">
@@ -87,7 +87,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="https://mutabie.ca/contact/" 
+              href={EXTERNAL_LINKS.MUTABIE_CONTACT} 
               target="_blank" 
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-primary hover:bg-secondary text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-flex items-center justify-center"
@@ -100,13 +100,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       {/* Footer */}
       <footer className="border-t border-border py-12 text-center text-text-secondary">
         <div className="max-w-4xl mx-auto">
           <p className="mb-4">&copy; 2025 Dyad Framework. All rights reserved.</p>
           <p className="text-sm">
-            Powered by <a href="https://mutabie.ca" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Mutabie Canada Inc.</a>
+            Powered by <a href={EXTERNAL_LINKS.MUTABIE_HOME} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Mutabie Canada Inc.</a>
           </p>
         </div>
       </footer>

@@ -1,9 +1,11 @@
+import { EXTERNAL_LINKS } from "@/config/external-links";
+
 export const MadeWithDyad = () => {
   return (
     <div className="p-4 text-center">
-      <a
-        href="https://www.dyad.sh/"
-        target="_blank"
+      <a 
+        href={EXTERNAL_LINKS.DYAD_HOME} 
+        target="_blank" 
         rel="noopener noreferrer"
         className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
       >
