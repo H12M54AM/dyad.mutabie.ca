@@ -119,9 +119,10 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 px-4 bg-gradient-to-r from-primary to-primary-hover text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Who made this site?</h2>
           <p className="text-xl mb-10 max-w-2xl mx-auto text-primary-foreground/80">
-            Join thousands of developers building amazing applications with Dyad Framework.
+            Curious to learn more about
+            this site and who made it?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -130,7 +131,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Create Your First App
+              Reach out!
             </a>
             <a
               href="https://github.com/mutabie-ca/dyad-framework"
@@ -148,7 +149,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-border py-12 text-center text-text-secondary">
         <div className="max-w-4xl mx-auto">
-          <p className="mb-4">&copy; 2025 Dyad Framework. All rights reserved.</p>
+          <p className="mb-4">&copy; 2026 Mutabie Canada Inc. All rights reserved.</p>
           <p className="text-sm">
             Powered by{" "}
             <a
