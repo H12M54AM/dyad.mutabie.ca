@@ -20,9 +20,14 @@ export default function Home() {
             Build stunning web applications with AI assistance. Create beautiful, responsive interfaces in minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-primary hover:bg-primary-hover text-white text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+            <a 
+              href="https://mutabie.ca/contact/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-primary hover:bg-primary-hover text-white text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-flex items-center justify-center"
+            >
               Get Started
-            </button>
+            </a>
             <Link to="/about">
               <button className="px-8 py-4 border border-text-primary text-text-primary hover:bg-bg-secondary text-lg font-semibold rounded-xl transition-all duration-300">
                 Learn More
@@ -81,9 +86,14 @@ export default function Home() {
             Join thousands of developers building amazing applications with Dyad Framework.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-primary hover:bg-secondary text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+            <a 
+              href="https://mutabie.ca/contact/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white text-primary hover:bg-secondary text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-flex items-center justify-center"
+            >
               Create Your First App
-            </button>
+            </a>
             <button className="px-8 py-4 bg-transparent border border-white text-white hover:bg-white/10 text-lg font-semibold rounded-xl transition-all duration-300">
               View Documentation
             </button>
