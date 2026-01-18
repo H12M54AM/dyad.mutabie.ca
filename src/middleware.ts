@@ -18,7 +18,7 @@ export function middleware(request: NextRequest) {
   }
 
   // Get client IP address
-  const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown';
+  const ip = (request as any).ip || request.headers.get('x-forwarded-for') || 'unknown';
 
   // Initialize or update request count
   const now = Date.now();
