@@ -34,6 +34,14 @@
         {
           "key": "Permissions-Policy",
           "value": "geolocation=(), microphone=(), camera=()"
+        },
+        {
+          "key": "X-RateLimit-Limit",
+          "value": "100"
+        },
+        {
+          "key": "X-RateLimit-Window",
+          "value": "60"
         }
       ]
     },
