@@ -105,7 +105,9 @@ export default function Home() {
       <footer className="border-t border-border py-12 text-center text-text-secondary">
         <div className="max-w-4xl mx-auto">
           <p className="mb-4">&copy; 2025 Dyad Framework. All rights reserved.</p>
-          <MadeWithDyad />
+          <p className="text-sm">
+            Powered by <a href="https://mutabie.ca" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Mutabie Canada Inc.</a>
+          </p>
         </div>
       </footer>
     </main>
