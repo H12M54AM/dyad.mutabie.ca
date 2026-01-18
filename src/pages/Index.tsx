@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom";
-import { MadeWithDyad } from "@/components/made-with-dyad";
-import { ExternalLink } from "@/components/external-link";
-import { EXTERNAL_LINKS } from "@/config/external-links";
 
 export default function Home() {
   return (
@@ -21,12 +18,14 @@ export default function Home() {
             Build stunning web applications with AI assistance. Create beautiful, responsive interfaces in minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ExternalLink 
-              href={EXTERNAL_LINKS.MUTABIE_CONTACT}
+            <a 
+              href="https://mutabie.ca/contact/" 
               className="px-8 py-4 bg-primary hover:bg-primary-hover text-white text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-flex items-center justify-center"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Get Started
-            </ExternalLink>
+            </a>
             <Link to="/about">
               <button className="px-8 py-4 border border-text-primary text-text-primary hover:bg-bg-secondary text-lg font-semibold rounded-xl transition-all duration-300">
                 Learn More
@@ -83,12 +82,14 @@ export default function Home() {
             Join thousands of developers building amazing applications with Dyad Framework.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ExternalLink 
-              href={EXTERNAL_LINKS.MUTABIE_CONTACT}
+            <a 
+              href="https://mutabie.ca/contact/" 
               className="px-8 py-4 bg-white text-primary hover:bg-secondary text-lg font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl inline-flex items-center justify-center"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Create Your First App
-            </ExternalLink>
+            </a>
             <button className="px-8 py-4 bg-transparent border border-white text-white hover:bg-white/10 text-lg font-semibold rounded-xl transition-all duration-300">
               View Documentation
             </button>
@@ -101,12 +102,14 @@ export default function Home() {
           <p className="mb-4">&copy; 2025 Dyad Framework. All rights reserved.</p>
           <p className="text-sm">
             Powered by{" "}
-            <ExternalLink 
-              href={EXTERNAL_LINKS.MUTABIE_HOME}
+            <a 
+              href="https://mutabie.ca" 
               className="text-primary hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Mutabie Canada Inc.
-            </ExternalLink>
+            </a>
           </p>
         </div>
       </footer>

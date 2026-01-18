@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { ExternalLink } from "@/components/external-link";
-import { EXTERNAL_LINKS } from "@/config/external-links";
 
 export default function About() {
   return (
