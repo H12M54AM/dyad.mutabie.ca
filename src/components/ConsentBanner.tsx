@@ -2,27 +2,38 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { useCookies } from 'react-cookie';
 
 const ConsentBanner = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [cookies, setCookie] = useCookies(['analytics-consent']);
 
   useEffect(() => {
     // Check if user has already made a consent decision
-    const consentGiven = localStorage.getItem('analytics-consent');
-    if (consentGiven === null) {
+    if (cookies['analytics-consent'] === undefined) {
       setIsVisible(true);
     }
-  }, []);
+  }, [cookies]);
 
   const handleAccept = () => {
-    localStorage.setItem('analytics-consent', 'true');
+    setCookie('analytics-consent', 'true', {
+      path: '/',
+      maxAge: 31536000, // 1 year
+      sameSite: 'strict',
+      secure: process.env.NODE_ENV === 'production'
+    });
     setIsVisible(false);
     // Dispatch event to notify app that consent was given
     window.dispatchEvent(new CustomEvent('analytics-consent-given'));
   };
 
   const handleReject = () => {
-    localStorage.setItem('analytics-consent', 'false');
+    setCookie('analytics-consent', 'false', {
+      path: '/',
+      maxAge: 31536000, // 1 year
+      sameSite: 'strict',
+      secure: process.env.NODE_ENV === 'production'
+    });
     setIsVisible(false);
   };
 

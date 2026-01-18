@@ -45,6 +45,15 @@ export function middleware(request: NextRequest) {
     });
   }
 
+  // Validate analytics consent cookie
+  const consentCookie = request.cookies.get('analytics-consent');
+  if (consentCookie && !['true', 'false'].includes(consentCookie.value)) {
+    // Invalid consent value - remove it
+    const response = NextResponse.next();
+    response.cookies.delete('analytics-consent');
+    return response;
+  }
+
   return NextResponse.next();
 }
 
