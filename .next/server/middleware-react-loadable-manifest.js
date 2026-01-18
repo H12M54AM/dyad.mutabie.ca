@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"components/AnalyticsWrapper.tsx -> @vercel/analytics/react\":{\"id\":\"components/AnalyticsWrapper.tsx -> @vercel/analytics/react\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_pnpm_vercel_analytics_1_6_1_next_14_2_15_react-dom_18_3_1_rea-e643b4.js\"]}}"
