@@ -4,16 +4,14 @@ export const EXTERNAL_LINKS = {
   DYAD_HOME: "https://www.dyad.sh/",
 } as const;
 
+// Whitelist of allowed external URLs
+const ALLOWED_EXTERNAL_URLS = Object.values(EXTERNAL_LINKS);
+
 export const isAllowedExternalLink = (url: string): boolean => {
-  const allowedDomains = [
-    "mutabie.ca",
-    "dyad.sh"
-  ];
-  
   try {
-    const urlObj = new URL(url);
-    return allowedDomains.some(domain => 
-      urlObj.hostname === domain || urlObj.hostname.endsWith(`.${domain}`)
+    // Check if the URL is in our whitelist
+    return ALLOWED_EXTERNAL_URLS.some(allowedUrl => 
+      url === allowedUrl || url.startsWith(allowedUrl)
     );
   } catch {
     return false;

@@ -12,13 +12,15 @@ export const ExternalLink: React.FC<ExternalLinkProps> = ({
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    LinkService.redirectToExternal(href);
+    LinkService.openExternalLink(href);
   };
 
   return (
     <a 
       href={href} 
       onClick={handleClick}
+      target="_blank"
+      rel="noopener noreferrer"
       {...props}
     >
       {children}

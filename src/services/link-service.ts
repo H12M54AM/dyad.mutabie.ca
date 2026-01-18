@@ -1,19 +1,17 @@
 import { isAllowedExternalLink } from "@/config/external-links";
 
 export class LinkService {
-  static redirectToExternal(url: string): void {
-    // Validate the URL before redirecting
+  static openExternalLink(url: string): void {
+    // Validate the URL before opening
     if (!isAllowedExternalLink(url)) {
-      console.warn("Blocked attempt to redirect to untrusted domain:", url);
-      // Redirect to a safe page or show an error
-      window.location.href = "/";
+      console.warn("Blocked attempt to open untrusted external link:", url);
       return;
     }
 
-    // Log the redirect for monitoring (in a real app, this would go to your analytics/monitoring service)
-    console.log("Redirecting to external URL:", url);
-    
-    // Perform the redirect
-    window.location.href = url;
+    // Log the external link opening for monitoring
+    console.log("Opening external link:", url);
+
+    // Open in a new tab with security attributes
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 }
