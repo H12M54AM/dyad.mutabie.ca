@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 
 const AnalyticsWrapper = () => {
-  const [shouldRender, setShouldRender] = useState(false);
+  const [shouldRender, setShouldRender] = useState<boolean>(false);
 
   useEffect(() => {
     // Check if consent was previously given
@@ -18,10 +18,9 @@ const AnalyticsWrapper = () => {
       setShouldRender(true);
     };
 
-    window.addEventListener('analytics-consent-given', handleConsent);
-
+    window.addEventListener('analytics-consent-given', handleConsent as EventListener);
     return () => {
-      window.removeEventListener('analytics-consent-given', handleConsent);
+      window.removeEventListener('analytics-consent-given', handleConsent as EventListener);
     };
   }, []);
 
