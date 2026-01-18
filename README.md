@@ -66,7 +66,7 @@ Contributions are welcome, but please be aware that this is a vibe coding reposi
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details.
 
 ## ⚠️ Vibe Coding Disclaimer
 
