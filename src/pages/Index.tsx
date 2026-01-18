@@ -134,7 +134,7 @@ export default function Home() {
               Reach out!
             </a>
             <a
-              href="https://github.com/mutabie-ca/dyad-framework"
+              href="https://github.com/Mutabie-Canada-Inc/dyad.mutabie.ca"
               className="px-8 py-4 bg-transparent border border-white text-white hover:bg-white/10 text-lg font-semibold rounded-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
               target="_blank"
               rel="noopener noreferrer"
